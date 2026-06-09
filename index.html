@@ -141,70 +141,111 @@
   .demo-meta .dm-tag{font-family:'DM Mono';font-size:12px;color:var(--g2);letter-spacing:.05em;}
 
   /* ===== MOCK: Clínica médica ===== */
-  .mk-med{height:100%;background:linear-gradient(170deg,#f4f9fb,#e8f1f6);color:#143b4a;font-family:'DM Sans';padding:0;}
-  .mk-med .nav{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;}
-  .mk-med .lg{font-weight:700;font-size:15px;color:#0e7490;display:flex;align-items:center;gap:6px;}
-  .mk-med .lg .d{width:9px;height:9px;border-radius:50%;background:#22b8cf;}
-  .mk-med .mn{display:flex;gap:14px;font-size:10px;color:#5b7c89;}
-  .mk-med .hero{padding:14px 20px 0;display:block;min-height:auto;}
-  .mk-med h4{font-size:23px;line-height:1.15;font-weight:700;color:#0c3a4a;margin-bottom:8px;}
-  .mk-med h4 span{color:#0e9bb5;}
-  .mk-med p{font-size:11px;color:#4a6b78;margin-bottom:14px;max-width:90%;}
-  .mk-med .cta{display:inline-block;background:#0e9bb5;color:#fff;font-size:11px;font-weight:600;padding:9px 18px;border-radius:8px;box-shadow:0 8px 18px rgba(14,155,181,.3);}
-  .mk-med .chips{display:flex;gap:7px;margin-top:16px;flex-wrap:wrap;}
-  .mk-med .chip{background:#fff;border:1px solid #d4e6ec;color:#0e7490;font-size:9.5px;padding:6px 11px;border-radius:20px;font-weight:500;}
-  .mk-med .card{margin:16px 20px 0;background:#fff;border-radius:12px;padding:13px 15px;box-shadow:0 10px 30px rgba(14,116,144,.1);display:flex;gap:12px;align-items:center;}
-  .mk-med .card .av{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#22b8cf,#0e7490);}
-  .mk-med .card .tx b{font-size:11px;display:block;color:#0c3a4a;}
-  .mk-med .card .tx s{font-size:9.5px;color:#7a98a4;text-decoration:none;}
+  .mk-med{height:100%;background:#f0f7fb;color:#143b4a;font-family:'DM Sans';display:flex;flex-direction:column;}
+  .mk-med .nav{display:flex;justify-content:space-between;align-items:center;padding:11px 16px;background:#fff;border-bottom:1px solid #e0eef5;flex-shrink:0;}
+  .mk-med .lg{font-weight:700;font-size:13px;color:#0e7490;display:flex;align-items:center;gap:5px;}
+  .mk-med .lg .d{width:7px;height:7px;border-radius:50%;background:#22b8cf;}
+  .mk-med .mn{display:flex;gap:10px;font-size:9px;color:#5b7c89;}
+  .mk-med-hero{height:120px;background:linear-gradient(135deg,#0891b2 0%,#0e7490 50%,#155e75 100%);position:relative;overflow:hidden;flex-shrink:0;}
+  .mk-med-hero::before{content:"";position:absolute;top:-30px;right:-30px;width:130px;height:130px;border-radius:50%;background:rgba(255,255,255,.08);}
+  .mk-med-hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:50%;background:linear-gradient(transparent,rgba(12,58,74,.65));}
+  .mk-med-hero-txt{position:absolute;bottom:12px;left:14px;color:#fff;z-index:1;}
+  .mk-med-hero-txt h4{font-size:16px;font-weight:700;margin:0 0 2px;line-height:1.1;}
+  .mk-med-hero-txt h4 span{color:#67e8f9;}
+  .mk-med-hero-txt p{font-size:8.5px;opacity:.8;margin:0;}
+  .mk-med-hero-cta{position:absolute;bottom:12px;right:14px;z-index:1;background:#fff;color:#0e7490;font-size:8.5px;font-weight:700;padding:6px 12px;border-radius:6px;}
+  .mk-med-body{padding:12px 14px;flex:1;overflow:hidden;}
+  .mk-med-chips{display:flex;gap:5px;margin-bottom:10px;flex-wrap:wrap;}
+  .mk-med-chip{background:#e0f2f9;color:#0e7490;font-size:8.5px;padding:3px 9px;border-radius:20px;font-weight:600;}
+  .mk-med-cards{display:flex;gap:7px;margin-bottom:10px;}
+  .mk-med-card{background:#fff;border-radius:9px;padding:9px 11px;box-shadow:0 3px 12px rgba(14,116,144,.1);flex:1;display:flex;gap:8px;align-items:center;}
+  .mk-med-av{width:26px;height:26px;border-radius:50%;flex-shrink:0;}
+  .mk-med-av1{background:linear-gradient(135deg,#22b8cf,#0e7490);}
+  .mk-med-av2{background:linear-gradient(135deg,#67e8f9,#0891b2);}
+  .mk-med-av3{background:linear-gradient(135deg,#a5f3fc,#22b8cf);}
+  .mk-med-ct b{font-size:9px;display:block;color:#0c3a4a;line-height:1.2;font-weight:700;}
+  .mk-med-ct s{font-size:8px;color:#7a98a4;text-decoration:none;}
+  .mk-med-stats{display:flex;border-top:1px solid #e0eef5;padding-top:9px;gap:0;}
+  .mk-med-stat{flex:1;text-align:center;}
+  .mk-med-stat b{display:block;font-size:14px;font-weight:700;color:#0e7490;line-height:1;}
+  .mk-med-stat s{font-size:7.5px;color:#7a98a4;text-decoration:none;text-transform:uppercase;letter-spacing:.07em;}
 
   /* ===== MOCK: Barbearia ===== */
-  .mk-barb{height:100%;background:radial-gradient(circle at 70% 0%,#2a2118,#120d08 60%);color:#f0e6d6;font-family:'DM Sans';position:relative;overflow:hidden;}
-  .mk-barb::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 22px,rgba(212,160,72,.03) 22px,rgba(212,160,72,.03) 24px);}
-  .mk-barb .nav{display:flex;justify-content:space-between;align-items:center;padding:15px 20px;position:relative;z-index:1;}
-  .mk-barb .lg{font-family:'Bebas Neue';font-size:20px;letter-spacing:.08em;color:#e8b964;}
-  .mk-barb .mn{display:flex;gap:13px;font-size:9.5px;color:#a89b86;text-transform:uppercase;letter-spacing:.1em;}
-  .mk-barb .hero{padding:20px;position:relative;z-index:1;}
-  .mk-barb .tagline{font-size:9px;letter-spacing:.35em;text-transform:uppercase;color:#c79a4e;margin-bottom:10px;}
-  .mk-barb h4{font-family:'Bebas Neue';font-size:40px;line-height:.92;letter-spacing:.02em;margin-bottom:12px;color:#f4ead7;}
-  .mk-barb h4 span{color:#e8b964;}
-  .mk-barb .cta{display:inline-block;border:1.5px solid #e8b964;color:#e8b964;font-size:10px;font-weight:600;padding:9px 20px;border-radius:2px;letter-spacing:.15em;text-transform:uppercase;}
-  .mk-barb .price{display:flex;gap:18px;margin-top:22px;border-top:1px solid rgba(212,160,72,.2);padding-top:14px;}
-  .mk-barb .price div b{font-family:'Bebas Neue';font-size:18px;color:#e8b964;display:block;letter-spacing:.05em;}
-  .mk-barb .price div s{font-size:9px;color:#a89b86;text-decoration:none;text-transform:uppercase;letter-spacing:.08em;}
+  .mk-barb{height:100%;background:#0d0905;color:#f0e6d6;font-family:'DM Sans';display:flex;flex-direction:column;position:relative;overflow:hidden;}
+  .mk-barb::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 18px,rgba(212,160,72,.025) 18px,rgba(212,160,72,.025) 19px);pointer-events:none;}
+  .mk-barb .nav{display:flex;justify-content:space-between;align-items:center;padding:11px 16px;position:relative;z-index:2;border-bottom:1px solid rgba(212,160,72,.12);}
+  .mk-barb .lg{font-family:'Bebas Neue';font-size:18px;letter-spacing:.1em;color:#e8b964;}
+  .mk-barb .mn{display:flex;gap:10px;font-size:8.5px;color:#a89b86;text-transform:uppercase;letter-spacing:.1em;}
+  .mk-barb-hero{height:135px;position:relative;overflow:hidden;flex-shrink:0;background:linear-gradient(160deg,#2a1a0a 0%,#150c05 60%,#0d0905 100%);}
+  .mk-barb-geo{position:absolute;top:-20px;right:-20px;width:150px;height:150px;border:28px solid rgba(232,185,100,.07);border-radius:50%;}
+  .mk-barb-geo2{position:absolute;top:15px;right:30px;width:70px;height:70px;border:16px solid rgba(232,185,100,.05);border-radius:50%;}
+  .mk-barb-line{position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(232,185,100,.3),transparent);}
+  .mk-barb-hero-txt{position:absolute;bottom:14px;left:16px;z-index:1;}
+  .mk-barb-tagline{font-size:7px;letter-spacing:.45em;text-transform:uppercase;color:#c79a4e;margin-bottom:6px;}
+  .mk-barb-h{font-family:'Bebas Neue';font-size:30px;line-height:.9;letter-spacing:.03em;color:#f4ead7;}
+  .mk-barb-h span{color:#e8b964;}
+  .mk-barb-badge{position:absolute;top:12px;right:14px;border:1px solid rgba(232,185,100,.4);color:#e8b964;font-size:8px;padding:4px 10px;letter-spacing:.12em;text-transform:uppercase;}
+  .mk-barb-body{padding:12px 16px;flex:1;position:relative;z-index:2;}
+  .mk-barb-prices{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:11px;}
+  .mk-barb-price{border:1px solid rgba(212,160,72,.22);border-radius:5px;padding:9px 7px;text-align:center;background:rgba(255,255,255,.02);}
+  .mk-barb-price b{font-family:'Bebas Neue';font-size:19px;color:#e8b964;display:block;letter-spacing:.05em;line-height:1;}
+  .mk-barb-price s{font-size:8px;color:#a89b86;text-decoration:none;text-transform:uppercase;letter-spacing:.1em;}
+  .mk-barb-bottom{display:flex;align-items:center;gap:10px;}
+  .mk-barb-cta{border:1.5px solid #e8b964;color:#e8b964;font-size:8.5px;font-weight:600;padding:8px 16px;border-radius:2px;letter-spacing:.15em;text-transform:uppercase;display:inline-block;}
+  .mk-barb-hours{font-size:8px;color:#a89b86;letter-spacing:.06em;}
 
   /* ===== MOCK: Petshop ===== */
-  .mk-pet{height:100%;background:linear-gradient(165deg,#fff7f0,#ffeef4);color:#43314a;font-family:'DM Sans';}
-  .mk-pet .nav{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;}
-  .mk-pet .lg{font-weight:800;font-size:16px;color:#ff7a59;display:flex;align-items:center;gap:6px;}
-  .mk-pet .lg .paw{width:16px;height:16px;border-radius:50%;background:#ffb84d;position:relative;}
-  .mk-pet .mn{display:flex;gap:13px;font-size:10px;color:#9a7d8a;}
-  .mk-pet .hero{padding:16px 20px;}
-  .mk-pet h4{font-size:24px;line-height:1.12;font-weight:800;color:#5a2d42;margin-bottom:8px;}
-  .mk-pet h4 span{color:#2bb5a8;}
-  .mk-pet p{font-size:11px;color:#8a6b78;margin-bottom:14px;}
-  .mk-pet .cta{display:inline-block;background:#ff7a59;color:#fff;font-size:11px;font-weight:700;padding:10px 20px;border-radius:100px;box-shadow:0 8px 18px rgba(255,122,89,.34);}
-  .mk-pet .svcs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:18px;}
-  .mk-pet .svc{background:#fff;border-radius:13px;padding:12px 8px;text-align:center;box-shadow:0 8px 22px rgba(255,122,89,.1);}
-  .mk-pet .svc .ic{width:30px;height:30px;border-radius:50%;margin:0 auto 7px;}
-  .mk-pet .svc:nth-child(1) .ic{background:#ffe0d5;}
-  .mk-pet .svc:nth-child(2) .ic{background:#d5f3f0;}
-  .mk-pet .svc:nth-child(3) .ic{background:#ffeec2;}
-  .mk-pet .svc b{font-size:10px;color:#5a2d42;display:block;}
+  .mk-pet{height:100%;background:#fff;color:#43314a;font-family:'DM Sans';display:flex;flex-direction:column;}
+  .mk-pet .nav{display:flex;justify-content:space-between;align-items:center;padding:11px 16px;border-bottom:1px solid #fce7df;flex-shrink:0;}
+  .mk-pet .lg{font-weight:800;font-size:14px;color:#ff7a59;display:flex;align-items:center;gap:5px;}
+  .mk-pet .lg .paw{width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,#ffb347,#ff7a59);}
+  .mk-pet .mn{display:flex;gap:10px;font-size:9px;color:#9a7d8a;}
+  .mk-pet-hero{height:118px;background:linear-gradient(135deg,#ff9870 0%,#ff7a59 50%,#e8552e 100%);position:relative;overflow:hidden;flex-shrink:0;}
+  .mk-pet-hero::before{content:"";position:absolute;top:-20px;right:-20px;width:110px;height:110px;border-radius:50%;background:rgba(255,255,255,.12);}
+  .mk-pet-hero::after{content:"";position:absolute;top:10px;right:55px;width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,.08);}
+  .mk-pet-hero-txt{position:absolute;bottom:12px;left:14px;color:#fff;}
+  .mk-pet-hero-txt h4{font-size:15px;font-weight:800;margin:0 0 2px;line-height:1.1;text-shadow:0 2px 8px rgba(0,0,0,.2);}
+  .mk-pet-hero-txt p{font-size:8.5px;opacity:.9;margin:0;}
+  .mk-pet-badge{position:absolute;top:10px;right:12px;background:#fff;border-radius:20px;padding:4px 10px;font-size:8.5px;color:#ff7a59;font-weight:700;box-shadow:0 4px 12px rgba(255,122,89,.2);}
+  .mk-pet-body{padding:11px 14px;flex:1;overflow:hidden;}
+  .mk-pet-svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:9px;}
+  .mk-pet-svc{background:linear-gradient(145deg,#fff7f0,#fff);border:1px solid #fce7df;border-radius:10px;padding:9px 5px;text-align:center;}
+  .mk-pet-svc .ic{width:26px;height:26px;border-radius:50%;margin:0 auto 5px;}
+  .mk-pet-svc:nth-child(1) .ic{background:linear-gradient(135deg,#ffb347,#ff7a59);}
+  .mk-pet-svc:nth-child(2) .ic{background:linear-gradient(135deg,#2bb5a8,#1a8a80);}
+  .mk-pet-svc:nth-child(3) .ic{background:linear-gradient(135deg,#c084fc,#7c3aed);}
+  .mk-pet-svc b{font-size:9px;color:#5a2d42;display:block;font-weight:700;line-height:1.2;}
+  .mk-pet-svc s{font-size:7.5px;color:#b58a96;text-decoration:none;}
+  .mk-pet-bottom{background:linear-gradient(135deg,#fff7f0,#ffeef4);border:1px solid #fce7df;border-radius:8px;padding:8px 11px;display:flex;align-items:center;justify-content:space-between;}
+  .mk-pet-rating b{font-size:17px;color:#ff7a59;display:block;font-weight:800;line-height:1;}
+  .mk-pet-rating s{font-size:8px;color:#b58a96;text-decoration:none;}
+  .mk-pet-wa{background:#25d366;color:#fff;font-size:8.5px;font-weight:700;padding:7px 11px;border-radius:20px;display:inline-block;}
 
   /* ===== MOCK: Hotel ===== */
-  .mk-hotel{height:100%;background:linear-gradient(165deg,#10261f,#0a1813);color:#ece4d4;font-family:'DM Sans';position:relative;}
-  .mk-hotel .nav{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;border-bottom:1px solid rgba(200,170,110,.14);}
-  .mk-hotel .lg{font-family:'Playfair Display';font-style:italic;font-size:18px;color:#d4b676;}
-  .mk-hotel .mn{display:flex;gap:14px;font-size:9px;color:#9aab9f;text-transform:uppercase;letter-spacing:.12em;}
-  .mk-hotel .hero{padding:26px 22px;}
-  .mk-hotel .stars{color:#d4b676;font-size:11px;letter-spacing:3px;margin-bottom:10px;}
-  .mk-hotel h4{font-family:'Playfair Display';font-size:30px;line-height:1.06;margin-bottom:10px;color:#f3ecdc;}
-  .mk-hotel h4 em{color:#d4b676;}
-  .mk-hotel p{font-size:11px;color:#9aab9f;margin-bottom:16px;max-width:88%;line-height:1.5;}
-  .mk-hotel .cta{display:inline-block;background:#d4b676;color:#10261f;font-size:10px;font-weight:700;padding:10px 22px;border-radius:3px;letter-spacing:.12em;text-transform:uppercase;}
-  .mk-hotel .feat{display:flex;gap:16px;margin-top:24px;font-size:9px;color:#9aab9f;text-transform:uppercase;letter-spacing:.1em;}
-  .mk-hotel .feat span{border-left:1px solid rgba(212,182,118,.3);padding-left:10px;}
+  .mk-hotel{height:100%;background:#071309;color:#ece4d4;font-family:'DM Sans';display:flex;flex-direction:column;position:relative;}
+  .mk-hotel .nav{display:flex;justify-content:space-between;align-items:center;padding:11px 16px;border-bottom:1px solid rgba(200,170,110,.15);flex-shrink:0;position:relative;z-index:2;}
+  .mk-hotel .lg{font-family:'Playfair Display';font-style:italic;font-size:16px;color:#d4b676;}
+  .mk-hotel .mn{display:flex;gap:12px;font-size:8.5px;color:#9aab9f;text-transform:uppercase;letter-spacing:.1em;}
+  .mk-hotel-hero{height:135px;position:relative;overflow:hidden;flex-shrink:0;background:linear-gradient(160deg,#1e3a28 0%,#0f2318 50%,#071309 100%);}
+  .mk-hotel-hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 20px,rgba(212,182,118,.03) 20px,rgba(212,182,118,.03) 21px);}
+  .mk-hotel-hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:70%;background:linear-gradient(transparent,rgba(7,19,9,.95));}
+  .mk-hotel-hero-glow{position:absolute;top:10px;right:20px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(212,182,118,.12),transparent 70%);}
+  .mk-hotel-hero-txt{position:absolute;bottom:12px;left:14px;z-index:2;}
+  .mk-hotel-stars{color:#d4b676;font-size:9px;letter-spacing:2px;margin-bottom:4px;}
+  .mk-hotel-h{font-family:'Playfair Display';font-size:17px;line-height:1.1;color:#f3ecdc;}
+  .mk-hotel-h em{color:#d4b676;}
+  .mk-hotel-body{padding:11px 14px;flex:1;overflow:hidden;}
+  .mk-hotel-rooms{display:flex;gap:7px;margin-bottom:9px;}
+  .mk-hotel-room{flex:1;border:1px solid rgba(200,170,110,.2);border-radius:7px;padding:9px 10px;background:rgba(255,255,255,.03);}
+  .mk-hotel-room.feat{border-color:rgba(212,182,118,.45);background:rgba(212,182,118,.07);}
+  .mk-hotel-room-name{font-size:8px;color:#9aab9f;text-transform:uppercase;letter-spacing:.1em;margin-bottom:3px;}
+  .mk-hotel-room-price{font-family:'Playfair Display';font-size:15px;color:#d4b676;line-height:1;}
+  .mk-hotel-room-price s{font-size:8px;color:#9aab9f;text-decoration:none;font-family:'DM Sans';}
+  .mk-hotel-room-detail{font-size:7.5px;color:#6a7a70;margin-top:3px;}
+  .mk-hotel-bottom{display:flex;align-items:center;justify-content:space-between;}
+  .mk-hotel-tags{display:flex;gap:5px;}
+  .mk-hotel-tag{font-size:7.5px;color:#9aab9f;border:1px solid rgba(200,170,110,.15);border-radius:4px;padding:4px 7px;}
+  .mk-hotel-cta{background:#d4b676;color:#071309;font-size:9px;font-weight:700;padding:8px 14px;border-radius:3px;letter-spacing:.1em;text-transform:uppercase;display:inline-block;}
 
   /* ---------- PROCESS ---------- */
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:64px;position:relative;}
@@ -391,18 +432,20 @@
 
   /* ---------- MOCKUP MOBILE OVERRIDES ---------- */
   @media(max-width:520px){
-    /* Clínica: forçar coluna única dentro do b-screen */
-    .mk-med > div[style*="grid-template-columns"]{display:flex!important;flex-direction:column!important;}
-    .mk-med > div > div[style*="border-right"]{border-right:none!important;border-bottom:1px solid #d4e6ec;}
-    .mk-med > div > div{padding:10px 14px!important;}
-    /* Hotel: forçar coluna única */
-    .mk-hotel > div[style*="grid-template-columns"]{display:flex!important;flex-direction:column!important;}
-    .mk-hotel > div > div[style*="border-right"]{border-right:none!important;border-bottom:1px solid rgba(200,170,110,.12);}
-    .mk-hotel > div > div{padding:10px 14px!important;}
-    /* Barbearia e Petshop: ajustar padding */
-    .mk-barb .hero,.mk-pet .hero{padding:10px 14px!important;}
-    /* Ocultar itens secundários nos mockups pra não transbordar */
-    .mk-hotel > div > div:last-child{display:none;}
+    /* Clínica */
+    .mk-med-hero{height:100px;}
+    .mk-med-cards{flex-wrap:wrap;}
+    .mk-med-cards .mk-med-card:last-child{display:none;}
+    /* Barbearia */
+    .mk-barb-hero{height:110px;}
+    .mk-barb-h{font-size:24px!important;}
+    /* Petshop */
+    .mk-pet-hero{height:100px;}
+    /* Hotel */
+    .mk-hotel-hero{height:110px;}
+    .mk-hotel-rooms{flex-direction:column;gap:5px;}
+    .mk-hotel-rooms .mk-hotel-room:last-child{display:none;}
+    .mk-hotel-tags .mk-hotel-tag:nth-child(n+3){display:none;}
   }
 
   /* ---------- CURSOR ---------- */
@@ -538,23 +581,22 @@
           <div class="b-screen">
             <div class="mk-med">
               <div class="nav"><span class="lg"><span class="d"></span>Clínica Vitalis</span><span class="mn"><span>Especialidades</span><span>Equipe</span><span>Contato</span></span></div>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;height:calc(100% - 44px)">
-                <div style="padding:16px 20px;border-right:1px solid #d4e6ec">
-                  <h4 style="font-size:18px;line-height:1.15;font-weight:700;color:#0c3a4a;margin-bottom:6px">Cuidado que <span style="color:#0e9bb5">acolhe</span> em cada consulta.</h4>
-                  <p style="font-size:10px;color:#4a6b78;margin-bottom:12px">Agende com especialistas da região em poucos cliques.</p>
-                  <span class="cta" style="display:inline-block;background:#0e9bb5;color:#fff;font-size:10px;font-weight:600;padding:8px 16px;border-radius:8px;box-shadow:0 6px 14px rgba(14,155,181,.3)">Agendar consulta</span>
-                  <div style="display:flex;gap:6px;margin-top:12px;flex-wrap:wrap"><span class="chip">Cardiologia</span><span class="chip">Dermatologia</span><span class="chip">Pediatria</span></div>
-                  <div style="margin-top:14px;display:flex;gap:16px">
-                    <div><div style="font-family:'DM Sans';font-size:18px;font-weight:700;color:#0e7490">12k+</div><div style="font-size:9px;color:#7a98a4">Pacientes</div></div>
-                    <div><div style="font-family:'DM Sans';font-size:18px;font-weight:700;color:#0e7490">4.9</div><div style="font-size:9px;color:#7a98a4">Avaliação</div></div>
-                    <div><div style="font-family:'DM Sans';font-size:18px;font-weight:700;color:#0e7490">15+</div><div style="font-size:9px;color:#7a98a4">Anos</div></div>
-                  </div>
+              <div class="mk-med-hero">
+                <div class="mk-med-hero-txt"><h4>Cuidado que <span>acolhe.</span></h4><p>Especialistas prontos para te atender</p></div>
+                <span class="mk-med-hero-cta">Agendar →</span>
+              </div>
+              <div class="mk-med-body">
+                <div class="mk-med-chips"><span class="mk-med-chip">Cardiologia</span><span class="mk-med-chip">Dermatologia</span><span class="mk-med-chip">Pediatria</span><span class="mk-med-chip">Ortopedia</span></div>
+                <div class="mk-med-cards">
+                  <div class="mk-med-card"><span class="mk-med-av mk-med-av1"></span><span class="mk-med-ct"><b>Dra. Helena Soares</b><s>Clínica Geral · Hoje 14h</s></span></div>
+                  <div class="mk-med-card"><span class="mk-med-av mk-med-av2"></span><span class="mk-med-ct"><b>Dr. Ricardo Lima</b><s>Cardiologia · Amanhã 9h</s></span></div>
+                  <div class="mk-med-card"><span class="mk-med-av mk-med-av3"></span><span class="mk-med-ct"><b>Dra. Camila Reis</b><s>Dermatologia · Sex 10h</s></span></div>
                 </div>
-                <div style="padding:14px 16px;display:flex;flex-direction:column;gap:8px;background:#f0f7fa">
-                  <div style="font-size:10px;font-weight:600;color:#0e7490;margin-bottom:2px">Próximos horários</div>
-                  <div class="card" style="background:#fff;border-radius:10px;padding:10px 12px;box-shadow:0 4px 12px rgba(14,116,144,.08);display:flex;gap:10px;align-items:center"><span class="av" style="background:linear-gradient(135deg,#22b8cf,#0e7490);width:32px;height:32px;border-radius:50%;flex-shrink:0"></span><span class="tx"><b style="font-size:10px;display:block;color:#0c3a4a">Dra. Helena Soares</b><s style="font-size:9px;color:#7a98a4;text-decoration:none">Clínica Geral · Hoje 14h</s></span></div>
-                  <div class="card" style="background:#fff;border-radius:10px;padding:10px 12px;box-shadow:0 4px 12px rgba(14,116,144,.08);display:flex;gap:10px;align-items:center"><span class="av" style="background:linear-gradient(135deg,#67e8f9,#0891b2);width:32px;height:32px;border-radius:50%;flex-shrink:0"></span><span class="tx"><b style="font-size:10px;display:block;color:#0c3a4a">Dr. Ricardo Lima</b><s style="font-size:9px;color:#7a98a4;text-decoration:none">Cardiologia · Amanhã 9h</s></span></div>
-                  <div class="card" style="background:#fff;border-radius:10px;padding:10px 12px;box-shadow:0 4px 12px rgba(14,116,144,.08);display:flex;gap:10px;align-items:center"><span class="av" style="background:linear-gradient(135deg,#a5f3fc,#22b8cf);width:32px;height:32px;border-radius:50%;flex-shrink:0"></span><span class="tx"><b style="font-size:10px;display:block;color:#0c3a4a">Dra. Camila Reis</b><s style="font-size:9px;color:#7a98a4;text-decoration:none">Dermatologia · Sex 10h</s></span></div>
+                <div class="mk-med-stats">
+                  <div class="mk-med-stat"><b>12k+</b><s>Pacientes</s></div>
+                  <div class="mk-med-stat"><b>4.9</b><s>Avaliação</s></div>
+                  <div class="mk-med-stat"><b>15+</b><s>Anos</s></div>
+                  <div class="mk-med-stat"><b>8</b><s>Especialidades</s></div>
                 </div>
               </div>
             </div>
@@ -571,18 +613,25 @@
             <div class="b-screen">
               <div class="mk-barb">
                 <div class="nav"><span class="lg">NAVALHA</span><span class="mn"><span>Serviços</span><span>Galeria</span><span>Agenda</span></span></div>
-                <div class="hero" style="padding:14px 20px;position:relative;z-index:1">
-                  <div class="tagline">Tradição &amp; Estilo · Desde 2008</div>
-                  <h4 style="font-family:'Bebas Neue';font-size:34px;line-height:.92;letter-spacing:.02em;margin-bottom:10px;color:#f4ead7">SEU CORTE,<br><span style="color:#e8b964">SUA MARCA.</span></h4>
-                  <span class="cta" style="display:inline-block;border:1.5px solid #e8b964;color:#e8b964;font-size:9px;font-weight:600;padding:8px 18px;border-radius:2px;letter-spacing:.15em;text-transform:uppercase">Agendar horário</span>
-                  <div class="price" style="display:flex;gap:0;margin-top:16px;border-top:1px solid rgba(212,160,72,.2);padding-top:12px">
-                    <div style="flex:1;padding-right:12px;border-right:1px solid rgba(212,160,72,.15)"><b style="font-family:'Bebas Neue';font-size:20px;color:#e8b964;display:block;letter-spacing:.05em">R$ 45</b><s style="font-size:9px;color:#a89b86;text-decoration:none;text-transform:uppercase;letter-spacing:.08em">Corte</s></div>
-                    <div style="flex:1;padding:0 12px;border-right:1px solid rgba(212,160,72,.15)"><b style="font-family:'Bebas Neue';font-size:20px;color:#e8b964;display:block;letter-spacing:.05em">R$ 35</b><s style="font-size:9px;color:#a89b86;text-decoration:none;text-transform:uppercase;letter-spacing:.08em">Barba</s></div>
-                    <div style="flex:1;padding-left:12px"><b style="font-family:'Bebas Neue';font-size:20px;color:#e8b964;display:block;letter-spacing:.05em">R$ 70</b><s style="font-size:9px;color:#a89b86;text-decoration:none;text-transform:uppercase;letter-spacing:.08em">Combo</s></div>
+                <div class="mk-barb-hero">
+                  <div class="mk-barb-geo"></div>
+                  <div class="mk-barb-geo2"></div>
+                  <div class="mk-barb-line"></div>
+                  <div class="mk-barb-badge">Desde 2008</div>
+                  <div class="mk-barb-hero-txt">
+                    <div class="mk-barb-tagline">Tradição &amp; Estilo · Barbearia Clássica</div>
+                    <div class="mk-barb-h">SEU CORTE,<br><span>SUA MARCA.</span></div>
                   </div>
-                  <div style="margin-top:12px;display:flex;gap:6px">
-                    <div style="background:rgba(232,185,100,.1);border:1px solid rgba(232,185,100,.25);border-radius:4px;padding:6px 10px;font-size:9px;color:#c9a55a;letter-spacing:.1em;text-transform:uppercase">Seg–Sex 9h–20h</div>
-                    <div style="background:rgba(232,185,100,.1);border:1px solid rgba(232,185,100,.25);border-radius:4px;padding:6px 10px;font-size:9px;color:#c9a55a;letter-spacing:.1em;text-transform:uppercase">Sáb 9h–18h</div>
+                </div>
+                <div class="mk-barb-body">
+                  <div class="mk-barb-prices">
+                    <div class="mk-barb-price"><b>R$45</b><s>Corte</s></div>
+                    <div class="mk-barb-price"><b>R$35</b><s>Barba</s></div>
+                    <div class="mk-barb-price"><b>R$70</b><s>Combo</s></div>
+                  </div>
+                  <div class="mk-barb-bottom">
+                    <span class="mk-barb-cta">Agendar horário</span>
+                    <span class="mk-barb-hours">Seg–Sex 9h–20h</span>
                   </div>
                 </div>
               </div>
@@ -597,16 +646,20 @@
             <div class="b-screen">
               <div class="mk-pet">
                 <div class="nav"><span class="lg"><span class="paw"></span>MundoPet</span><span class="mn"><span>Serviços</span><span>Loja</span><span>Contato</span></span></div>
-                <div class="hero" style="padding:12px 18px">
-                  <h4 style="font-size:18px;line-height:1.12;font-weight:800;color:#5a2d42;margin-bottom:6px">Seu melhor amigo merece o <span style="color:#2bb5a8">melhor cuidado</span>.</h4>
-                  <p style="font-size:10px;color:#8a6b78;margin-bottom:10px">Agende pelo WhatsApp em segundos.</p>
-                  <span class="cta" style="display:inline-block;background:#ff7a59;color:#fff;font-size:10px;font-weight:700;padding:8px 16px;border-radius:100px;box-shadow:0 6px 14px rgba(255,122,89,.3)">Agendar banho &amp; tosa</span>
-                  <div class="svcs" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:12px">
-                    <div class="svc" style="background:#fff;border-radius:10px;padding:10px 6px;text-align:center;box-shadow:0 6px 16px rgba(255,122,89,.1)"><span class="ic" style="width:26px;height:26px;border-radius:50%;margin:0 auto 6px;display:block;background:#ffe0d5"></span><b style="font-size:9.5px;color:#5a2d42;display:block">Banho</b><span style="font-size:8.5px;color:#b58a96">A partir R$35</span></div>
-                    <div class="svc" style="background:#fff;border-radius:10px;padding:10px 6px;text-align:center;box-shadow:0 6px 16px rgba(255,122,89,.1)"><span class="ic" style="width:26px;height:26px;border-radius:50%;margin:0 auto 6px;display:block;background:#d5f3f0"></span><b style="font-size:9.5px;color:#5a2d42;display:block">Tosa</b><span style="font-size:8.5px;color:#b58a96">A partir R$45</span></div>
-                    <div class="svc" style="background:#fff;border-radius:10px;padding:10px 6px;text-align:center;box-shadow:0 6px 16px rgba(255,122,89,.1)"><span class="ic" style="width:26px;height:26px;border-radius:50%;margin:0 auto 6px;display:block;background:#ffeec2"></span><b style="font-size:9.5px;color:#5a2d42;display:block">Vet</b><span style="font-size:8.5px;color:#b58a96">Consultas</span></div>
+                <div class="mk-pet-hero">
+                  <span class="mk-pet-badge">⭐ 4.8 Google</span>
+                  <div class="mk-pet-hero-txt"><h4>Seu pet merece o <span style="color:#ffd5ca">melhor.</span></h4><p>Banho · Tosa · Veterinário · Pet Hotel</p></div>
+                </div>
+                <div class="mk-pet-body">
+                  <div class="mk-pet-svcs">
+                    <div class="mk-pet-svc"><span class="ic"></span><b>Banho</b><s>A partir R$35</s></div>
+                    <div class="mk-pet-svc"><span class="ic"></span><b>Tosa</b><s>A partir R$45</s></div>
+                    <div class="mk-pet-svc"><span class="ic"></span><b>Vet</b><s>Consultas</s></div>
                   </div>
-                  <div style="margin-top:10px;background:#fff7f0;border-radius:8px;padding:8px 12px;display:flex;align-items:center;gap:8px"><span style="font-size:14px">⭐</span><span style="font-size:9.5px;color:#5a2d42"><b>4.8</b> · Mais de 800 avaliações no Google</span></div>
+                  <div class="mk-pet-bottom">
+                    <div class="mk-pet-rating"><b>800+</b><s>avaliações 5★</s></div>
+                    <span class="mk-pet-wa">📱 WhatsApp</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -622,34 +675,22 @@
           <div class="b-screen">
             <div class="mk-hotel">
               <div class="nav"><span class="lg">Serra Azul</span><span class="mn"><span>Suítes</span><span>Estrutura</span><span>Reservas</span></span></div>
-              <div style="display:grid;grid-template-columns:1.1fr 1fr;height:calc(100% - 44px)">
-                <div style="padding:18px 20px;border-right:1px solid rgba(200,170,110,.12)">
-                  <div style="color:#d4b676;font-size:11px;letter-spacing:3px;margin-bottom:8px">★★★★★</div>
-                  <h4 style="font-family:'Playfair Display';font-size:22px;line-height:1.1;margin-bottom:8px;color:#f3ecdc">Onde a serra <em style="color:#d4b676">encontra</em> o silêncio.</h4>
-                  <p style="font-size:10px;color:#9aab9f;margin-bottom:14px;line-height:1.5">Suítes com vista, gastronomia local e a tranquilidade que você merece.</p>
-                  <span class="cta" style="display:inline-block;background:#d4b676;color:#10261f;font-size:9.5px;font-weight:700;padding:9px 20px;border-radius:3px;letter-spacing:.12em;text-transform:uppercase">Reservar agora</span>
-                  <div style="display:flex;gap:0;margin-top:16px;border-top:1px solid rgba(200,170,110,.15);padding-top:12px">
-                    <div style="flex:1;text-align:center"><div style="font-family:'Playfair Display';font-size:16px;color:#d4b676">48</div><div style="font-size:8px;color:#9aab9f;text-transform:uppercase;letter-spacing:.08em">Suítes</div></div>
-                    <div style="flex:1;text-align:center;border-left:1px solid rgba(200,170,110,.15)"><div style="font-family:'Playfair Display';font-size:16px;color:#d4b676">4.9</div><div style="font-size:8px;color:#9aab9f;text-transform:uppercase;letter-spacing:.08em">Rating</div></div>
-                    <div style="flex:1;text-align:center;border-left:1px solid rgba(200,170,110,.15)"><div style="font-family:'Playfair Display';font-size:16px;color:#d4b676">12</div><div style="font-size:8px;color:#9aab9f;text-transform:uppercase;letter-spacing:.08em">Anos</div></div>
-                  </div>
+              <div class="mk-hotel-hero">
+                <div class="mk-hotel-hero-glow"></div>
+                <div class="mk-hotel-hero-txt">
+                  <div class="mk-hotel-stars">★★★★★</div>
+                  <div class="mk-hotel-h">Onde a serra <em>encontra</em> o silêncio.</div>
                 </div>
-                <div style="padding:14px 16px;display:flex;flex-direction:column;gap:8px">
-                  <div style="font-size:9px;color:#d4b676;letter-spacing:.15em;text-transform:uppercase;margin-bottom:2px">Disponibilidade</div>
-                  <div style="background:rgba(255,255,255,.04);border:1px solid rgba(200,170,110,.18);border-radius:8px;padding:10px 12px">
-                    <div style="font-size:9px;color:#9aab9f;margin-bottom:4px;text-transform:uppercase;letter-spacing:.1em">Suíte Vista Serra</div>
-                    <div style="font-family:'Playfair Display';font-size:15px;color:#d4b676">R$ 480<span style="font-size:10px;color:#9aab9f">/noite</span></div>
-                    <div style="font-size:8.5px;color:#6a7a70;margin-top:2px">Café da manhã incluso</div>
-                  </div>
-                  <div style="background:rgba(212,182,118,.08);border:1px solid rgba(200,170,110,.25);border-radius:8px;padding:10px 12px">
-                    <div style="font-size:9px;color:#9aab9f;margin-bottom:4px;text-transform:uppercase;letter-spacing:.1em">Suíte Master</div>
-                    <div style="font-family:'Playfair Display';font-size:15px;color:#d4b676">R$ 780<span style="font-size:10px;color:#9aab9f">/noite</span></div>
-                    <div style="font-size:8.5px;color:#6a7a70;margin-top:2px">Jacuzzi · Spa · Jantar</div>
-                  </div>
-                  <div style="display:flex;gap:6px;margin-top:2px">
-                    <div style="flex:1;background:rgba(255,255,255,.03);border:1px solid rgba(200,170,110,.12);border-radius:6px;padding:6px 8px;font-size:8px;color:#9aab9f;text-align:center">Café incluso</div>
-                    <div style="flex:1;background:rgba(255,255,255,.03);border:1px solid rgba(200,170,110,.12);border-radius:6px;padding:6px 8px;font-size:8px;color:#9aab9f;text-align:center">Pet friendly</div>
-                  </div>
+              </div>
+              <div class="mk-hotel-body">
+                <div class="mk-hotel-rooms">
+                  <div class="mk-hotel-room"><div class="mk-hotel-room-name">Suíte Vista</div><div class="mk-hotel-room-price">R$480<s>/noite</s></div><div class="mk-hotel-room-detail">Café da manhã incluso</div></div>
+                  <div class="mk-hotel-room feat"><div class="mk-hotel-room-name">Suíte Master</div><div class="mk-hotel-room-price">R$780<s>/noite</s></div><div class="mk-hotel-room-detail">Jacuzzi · Spa · Jantar</div></div>
+                  <div class="mk-hotel-room"><div class="mk-hotel-room-name">Chalé Serra</div><div class="mk-hotel-room-price">R$320<s>/noite</s></div><div class="mk-hotel-room-detail">Lareira · Varanda</div></div>
+                </div>
+                <div class="mk-hotel-bottom">
+                  <div class="mk-hotel-tags"><span class="mk-hotel-tag">Spa</span><span class="mk-hotel-tag">Pet friendly</span><span class="mk-hotel-tag">Gastronomia</span><span class="mk-hotel-tag">48 suítes</span></div>
+                  <span class="mk-hotel-cta">Reservar →</span>
                 </div>
               </div>
             </div>
