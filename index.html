@@ -280,26 +280,103 @@
   .fsoc svg{width:15px;height:15px;fill:currentColor;}
 
   /* ---------- RESPONSIVE ---------- */
+
+  /* === TABLET (≤900px) === */
   @media(max-width:900px){
-    .caps{grid-template-columns:1fr 1fr;}.cap:nth-child(even){margin-top:0;}
+    .caps{grid-template-columns:1fr 1fr;}
+    .cap:nth-child(even){margin-top:0;}
     .demos-row-half{grid-template-columns:1fr;}
     .steps{grid-template-columns:1fr 1fr;}
     .steps-track,.steps-progress{display:none;}
-    .step:nth-child(odd){border-right:1px solid var(--line);}
-    .step:nth-child(even){border-right:none;}
+    .step:nth-child(2n+1){border-right:1px solid var(--line);}
+    .step:nth-child(2n){border-right:none;}
     .step{border-bottom:1px solid var(--line);}
     .plans{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto;}
     .plan.feat{order:-1;transform:none;}
     .plan.feat:hover{transform:translateY(-6px);}
   }
-  @media(max-width:540px){
-    .caps{grid-template-columns:1fr;}
-    .steps{grid-template-columns:1fr;}
-    .step{border-right:none;}
-    .sec{padding:80px 0;}
-    .container{padding:0 20px;}
-    .plan.feat{transform:none;}
+
+  /* === LARGE PHONE (≤640px) === */
+  @media(max-width:640px){
+    /* Decorative elements → off */
     .sec-num-bg{display:none;}
+    .cap:nth-child(even){margin-top:0;}
+
+    /* Nav */
+    nav .inner{padding:14px 20px;}
+
+    /* Hero */
+    .hero-content{padding-top:96px;padding-bottom:48px;}
+    h1.hero-h{font-size:clamp(2.2rem,8.5vw,2.8rem);letter-spacing:-.03em;margin-bottom:20px;}
+    .hero-sub{font-size:15px;margin-bottom:28px;padding-left:14px;}
+    .hero-btns{flex-direction:column;gap:10px;align-items:flex-start;}
+    .btn{width:100%;justify-content:center;font-size:15px;padding:14px 24px;}
+    .btn-ghost{padding-left:0;}
+    .eyebrow{font-size:11px;letter-spacing:.14em;padding:6px 12px;}
+
+    /* Sections */
+    .sec{padding:72px 0;}
+    .container{padding:0 18px;}
+    .sec-h{font-size:clamp(1.9rem,7vw,2.6rem);}
+    .sec-editorial{margin-bottom:32px;}
+    .sec-intro-new{font-size:15px;}
+
+    /* Capabilities */
+    .caps{grid-template-columns:1fr;gap:14px;margin-top:32px;}
+    .cap-num{font-size:4rem;}
+
+    /* Portfolio */
+    .demos-grid{gap:18px;margin-top:36px;}
+    .b-screen{height:280px!important;}
+    .demo-meta .dm-name{font-size:15px;}
+
+    /* Process */
+    .steps{grid-template-columns:1fr;margin-top:36px;}
+    .step{border-right:none!important;border-bottom:1px solid var(--line);padding:22px 18px 16px;}
+    .step:last-child{border-bottom:none;}
+    .step-bg-num{font-size:5.5rem;}
+    .step h3{font-size:16px;}
+
+    /* Pricing */
+    .plans{max-width:100%;gap:14px;margin-top:32px;}
+    .plan{padding:24px 20px;}
+    .plan .pprice{font-size:2.4rem;}
+    .recur-bar{flex-direction:column;text-align:center;gap:8px;padding:16px 18px;}
+
+    /* CTA */
+    .cta-sec{padding:80px 0;}
+    .cta-sec h2{font-size:clamp(1.8rem,7vw,2.4rem);}
+    .cta-lead{font-size:15px;}
+    .wa{font-size:15px;padding:15px 28px;width:100%;justify-content:center;max-width:320px;}
+    .cta-anchors{font-size:10.5px;letter-spacing:.07em;}
+
+    /* Footer */
+    .footer-inner{flex-direction:column;text-align:center;gap:18px;}
+    .footer-social{justify-content:center;}
+  }
+
+  /* === SMALL PHONE (≤400px) === */
+  @media(max-width:400px){
+    nav .inner{padding:12px 16px;}
+    .logo{font-size:18px;}
+    .nav-cta{font-size:13px;padding:8px 16px;}
+
+    .container{padding:0 16px;}
+    h1.hero-h{font-size:clamp(2rem,8vw,2.4rem);}
+    .eyebrow{font-size:10px;letter-spacing:.1em;}
+    .hero-sub{font-size:14px;}
+
+    .sec{padding:60px 0;}
+    .sec-h{font-size:clamp(1.7rem,6.5vw,2.2rem);}
+
+    .b-screen{height:240px!important;}
+    .plan{padding:20px 16px;}
+    .plan .pprice{font-size:2rem;}
+    .plan li{font-size:13px;}
+
+    .wa{font-size:14px;padding:14px 22px;}
+    .cta-sec{padding:64px 0;}
+    .cta-sec h2{font-size:clamp(1.6rem,6.5vw,2rem);}
   }
   @media(prefers-reduced-motion:reduce){
     *{animation:none!important;transition:none!important;}
@@ -310,6 +387,22 @@
     .steps-progress{width:75%!important;}
     .plan li{opacity:1!important;transform:none!important;}
     #net{transform:none!important;}
+  }
+
+  /* ---------- MOCKUP MOBILE OVERRIDES ---------- */
+  @media(max-width:520px){
+    /* Clínica: forçar coluna única dentro do b-screen */
+    .mk-med > div[style*="grid-template-columns"]{display:flex!important;flex-direction:column!important;}
+    .mk-med > div > div[style*="border-right"]{border-right:none!important;border-bottom:1px solid #d4e6ec;}
+    .mk-med > div > div{padding:10px 14px!important;}
+    /* Hotel: forçar coluna única */
+    .mk-hotel > div[style*="grid-template-columns"]{display:flex!important;flex-direction:column!important;}
+    .mk-hotel > div > div[style*="border-right"]{border-right:none!important;border-bottom:1px solid rgba(200,170,110,.12);}
+    .mk-hotel > div > div{padding:10px 14px!important;}
+    /* Barbearia e Petshop: ajustar padding */
+    .mk-barb .hero,.mk-pet .hero{padding:10px 14px!important;}
+    /* Ocultar itens secundários nos mockups pra não transbordar */
+    .mk-hotel > div > div:last-child{display:none;}
   }
 
   /* ---------- CURSOR ---------- */
