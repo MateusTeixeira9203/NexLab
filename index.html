@@ -64,12 +64,11 @@
   .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:7px 15px;border-radius:100px;margin-bottom:28px;background:rgba(255,255,255,.02);opacity:0;animation:rise .8s .1s forwards;}
   .eyebrow .ping{width:7px;height:7px;border-radius:50%;background:var(--cy);box-shadow:0 0 10px var(--cy);animation:ping 2s infinite;}
   @keyframes ping{0%,100%{opacity:1;}50%{opacity:.3;}}
-  h1.hero-h{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(3.2rem,9vw,8.5rem);line-height:1.0;letter-spacing:-.04em;margin-bottom:28px;}
-  h1.hero-h .ln{display:block;clip-path:inset(100% 0 0 0);animation:cliprise .9s cubic-bezier(.16,1,.3,1) forwards;}
+  h1.hero-h{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2.4rem,5.2vw,5rem);line-height:1.02;letter-spacing:-.04em;margin-bottom:28px;}
+  h1.hero-h .ln{display:block;opacity:0;transform:translateY(28px);animation:rise .9s cubic-bezier(.16,1,.3,1) forwards;}
   h1.hero-h .ln:nth-child(1){animation-delay:0ms;}
   h1.hero-h .ln:nth-child(2){animation-delay:160ms;}
   h1.hero-h .ln:nth-child(3){animation-delay:320ms;}
-  @keyframes cliprise{to{clip-path:inset(0% 0 0 0);}}
   .hero-sub{font-size:clamp(15px,1.8vw,19px);color:var(--muted);max-width:560px;margin-bottom:38px;padding-left:18px;border-left:3px solid var(--g2);opacity:0;animation:rise .9s .56s forwards;}
   .hero-sub strong{color:var(--text);font-weight:600;}
   .hero-btns{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:rise .9s .68s forwards;}
@@ -446,13 +445,25 @@
           <div class="b-screen">
             <div class="mk-med">
               <div class="nav"><span class="lg"><span class="d"></span>Clínica Vitalis</span><span class="mn"><span>Especialidades</span><span>Equipe</span><span>Contato</span></span></div>
-              <div class="hero">
-                <h4>Cuidado que <span>acolhe</span> em cada consulta.</h4>
-                <p>Agende com os melhores especialistas da região em poucos cliques.</p>
-                <span class="cta">Agendar consulta</span>
-                <div class="chips"><span class="chip">Cardiologia</span><span class="chip">Dermatologia</span><span class="chip">Pediatria</span></div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;height:calc(100% - 44px)">
+                <div style="padding:16px 20px;border-right:1px solid #d4e6ec">
+                  <h4 style="font-size:18px;line-height:1.15;font-weight:700;color:#0c3a4a;margin-bottom:6px">Cuidado que <span style="color:#0e9bb5">acolhe</span> em cada consulta.</h4>
+                  <p style="font-size:10px;color:#4a6b78;margin-bottom:12px">Agende com especialistas da região em poucos cliques.</p>
+                  <span class="cta" style="display:inline-block;background:#0e9bb5;color:#fff;font-size:10px;font-weight:600;padding:8px 16px;border-radius:8px;box-shadow:0 6px 14px rgba(14,155,181,.3)">Agendar consulta</span>
+                  <div style="display:flex;gap:6px;margin-top:12px;flex-wrap:wrap"><span class="chip">Cardiologia</span><span class="chip">Dermatologia</span><span class="chip">Pediatria</span></div>
+                  <div style="margin-top:14px;display:flex;gap:16px">
+                    <div><div style="font-family:'DM Sans';font-size:18px;font-weight:700;color:#0e7490">12k+</div><div style="font-size:9px;color:#7a98a4">Pacientes</div></div>
+                    <div><div style="font-family:'DM Sans';font-size:18px;font-weight:700;color:#0e7490">4.9</div><div style="font-size:9px;color:#7a98a4">Avaliação</div></div>
+                    <div><div style="font-family:'DM Sans';font-size:18px;font-weight:700;color:#0e7490">15+</div><div style="font-size:9px;color:#7a98a4">Anos</div></div>
+                  </div>
+                </div>
+                <div style="padding:14px 16px;display:flex;flex-direction:column;gap:8px;background:#f0f7fa">
+                  <div style="font-size:10px;font-weight:600;color:#0e7490;margin-bottom:2px">Próximos horários</div>
+                  <div class="card" style="background:#fff;border-radius:10px;padding:10px 12px;box-shadow:0 4px 12px rgba(14,116,144,.08);display:flex;gap:10px;align-items:center"><span class="av" style="background:linear-gradient(135deg,#22b8cf,#0e7490);width:32px;height:32px;border-radius:50%;flex-shrink:0"></span><span class="tx"><b style="font-size:10px;display:block;color:#0c3a4a">Dra. Helena Soares</b><s style="font-size:9px;color:#7a98a4;text-decoration:none">Clínica Geral · Hoje 14h</s></span></div>
+                  <div class="card" style="background:#fff;border-radius:10px;padding:10px 12px;box-shadow:0 4px 12px rgba(14,116,144,.08);display:flex;gap:10px;align-items:center"><span class="av" style="background:linear-gradient(135deg,#67e8f9,#0891b2);width:32px;height:32px;border-radius:50%;flex-shrink:0"></span><span class="tx"><b style="font-size:10px;display:block;color:#0c3a4a">Dr. Ricardo Lima</b><s style="font-size:9px;color:#7a98a4;text-decoration:none">Cardiologia · Amanhã 9h</s></span></div>
+                  <div class="card" style="background:#fff;border-radius:10px;padding:10px 12px;box-shadow:0 4px 12px rgba(14,116,144,.08);display:flex;gap:10px;align-items:center"><span class="av" style="background:linear-gradient(135deg,#a5f3fc,#22b8cf);width:32px;height:32px;border-radius:50%;flex-shrink:0"></span><span class="tx"><b style="font-size:10px;display:block;color:#0c3a4a">Dra. Camila Reis</b><s style="font-size:9px;color:#7a98a4;text-decoration:none">Dermatologia · Sex 10h</s></span></div>
+                </div>
               </div>
-              <div class="card"><span class="av"></span><span class="tx"><b>Dra. Helena Soares</b><s>Clínica Geral · 4.9 ★</s></span></div>
             </div>
           </div>
         </div>
@@ -467,14 +478,18 @@
             <div class="b-screen">
               <div class="mk-barb">
                 <div class="nav"><span class="lg">NAVALHA</span><span class="mn"><span>Serviços</span><span>Galeria</span><span>Agenda</span></span></div>
-                <div class="hero">
-                  <div class="tagline">Tradição &amp; Estilo</div>
-                  <h4>SEU CORTE,<br><span>SUA MARCA.</span></h4>
-                  <span class="cta">Agendar horário</span>
-                  <div class="price">
-                    <div><b>R$ 45</b><s>Corte</s></div>
-                    <div><b>R$ 35</b><s>Barba</s></div>
-                    <div><b>R$ 70</b><s>Combo</s></div>
+                <div class="hero" style="padding:14px 20px;position:relative;z-index:1">
+                  <div class="tagline">Tradição &amp; Estilo · Desde 2008</div>
+                  <h4 style="font-family:'Bebas Neue';font-size:34px;line-height:.92;letter-spacing:.02em;margin-bottom:10px;color:#f4ead7">SEU CORTE,<br><span style="color:#e8b964">SUA MARCA.</span></h4>
+                  <span class="cta" style="display:inline-block;border:1.5px solid #e8b964;color:#e8b964;font-size:9px;font-weight:600;padding:8px 18px;border-radius:2px;letter-spacing:.15em;text-transform:uppercase">Agendar horário</span>
+                  <div class="price" style="display:flex;gap:0;margin-top:16px;border-top:1px solid rgba(212,160,72,.2);padding-top:12px">
+                    <div style="flex:1;padding-right:12px;border-right:1px solid rgba(212,160,72,.15)"><b style="font-family:'Bebas Neue';font-size:20px;color:#e8b964;display:block;letter-spacing:.05em">R$ 45</b><s style="font-size:9px;color:#a89b86;text-decoration:none;text-transform:uppercase;letter-spacing:.08em">Corte</s></div>
+                    <div style="flex:1;padding:0 12px;border-right:1px solid rgba(212,160,72,.15)"><b style="font-family:'Bebas Neue';font-size:20px;color:#e8b964;display:block;letter-spacing:.05em">R$ 35</b><s style="font-size:9px;color:#a89b86;text-decoration:none;text-transform:uppercase;letter-spacing:.08em">Barba</s></div>
+                    <div style="flex:1;padding-left:12px"><b style="font-family:'Bebas Neue';font-size:20px;color:#e8b964;display:block;letter-spacing:.05em">R$ 70</b><s style="font-size:9px;color:#a89b86;text-decoration:none;text-transform:uppercase;letter-spacing:.08em">Combo</s></div>
+                  </div>
+                  <div style="margin-top:12px;display:flex;gap:6px">
+                    <div style="background:rgba(232,185,100,.1);border:1px solid rgba(232,185,100,.25);border-radius:4px;padding:6px 10px;font-size:9px;color:#c9a55a;letter-spacing:.1em;text-transform:uppercase">Seg–Sex 9h–20h</div>
+                    <div style="background:rgba(232,185,100,.1);border:1px solid rgba(232,185,100,.25);border-radius:4px;padding:6px 10px;font-size:9px;color:#c9a55a;letter-spacing:.1em;text-transform:uppercase">Sáb 9h–18h</div>
                   </div>
                 </div>
               </div>
@@ -489,15 +504,16 @@
             <div class="b-screen">
               <div class="mk-pet">
                 <div class="nav"><span class="lg"><span class="paw"></span>MundoPet</span><span class="mn"><span>Serviços</span><span>Loja</span><span>Contato</span></span></div>
-                <div class="hero">
-                  <h4>Seu melhor amigo merece o <span>melhor cuidado</span>.</h4>
-                  <p>Banho, tosa e muito carinho. Agende pelo WhatsApp num toque.</p>
-                  <span class="cta">Agendar banho &amp; tosa</span>
-                  <div class="svcs">
-                    <div class="svc"><span class="ic"></span><b>Banho</b></div>
-                    <div class="svc"><span class="ic"></span><b>Tosa</b></div>
-                    <div class="svc"><span class="ic"></span><b>Vet</b></div>
+                <div class="hero" style="padding:12px 18px">
+                  <h4 style="font-size:18px;line-height:1.12;font-weight:800;color:#5a2d42;margin-bottom:6px">Seu melhor amigo merece o <span style="color:#2bb5a8">melhor cuidado</span>.</h4>
+                  <p style="font-size:10px;color:#8a6b78;margin-bottom:10px">Agende pelo WhatsApp em segundos.</p>
+                  <span class="cta" style="display:inline-block;background:#ff7a59;color:#fff;font-size:10px;font-weight:700;padding:8px 16px;border-radius:100px;box-shadow:0 6px 14px rgba(255,122,89,.3)">Agendar banho &amp; tosa</span>
+                  <div class="svcs" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:12px">
+                    <div class="svc" style="background:#fff;border-radius:10px;padding:10px 6px;text-align:center;box-shadow:0 6px 16px rgba(255,122,89,.1)"><span class="ic" style="width:26px;height:26px;border-radius:50%;margin:0 auto 6px;display:block;background:#ffe0d5"></span><b style="font-size:9.5px;color:#5a2d42;display:block">Banho</b><span style="font-size:8.5px;color:#b58a96">A partir R$35</span></div>
+                    <div class="svc" style="background:#fff;border-radius:10px;padding:10px 6px;text-align:center;box-shadow:0 6px 16px rgba(255,122,89,.1)"><span class="ic" style="width:26px;height:26px;border-radius:50%;margin:0 auto 6px;display:block;background:#d5f3f0"></span><b style="font-size:9.5px;color:#5a2d42;display:block">Tosa</b><span style="font-size:8.5px;color:#b58a96">A partir R$45</span></div>
+                    <div class="svc" style="background:#fff;border-radius:10px;padding:10px 6px;text-align:center;box-shadow:0 6px 16px rgba(255,122,89,.1)"><span class="ic" style="width:26px;height:26px;border-radius:50%;margin:0 auto 6px;display:block;background:#ffeec2"></span><b style="font-size:9.5px;color:#5a2d42;display:block">Vet</b><span style="font-size:8.5px;color:#b58a96">Consultas</span></div>
                   </div>
+                  <div style="margin-top:10px;background:#fff7f0;border-radius:8px;padding:8px 12px;display:flex;align-items:center;gap:8px"><span style="font-size:14px">⭐</span><span style="font-size:9.5px;color:#5a2d42"><b>4.8</b> · Mais de 800 avaliações no Google</span></div>
                 </div>
               </div>
             </div>
@@ -513,12 +529,35 @@
           <div class="b-screen">
             <div class="mk-hotel">
               <div class="nav"><span class="lg">Serra Azul</span><span class="mn"><span>Suítes</span><span>Estrutura</span><span>Reservas</span></span></div>
-              <div class="hero">
-                <div class="stars">★★★★★</div>
-                <h4>Onde a serra <em>encontra</em> o silêncio.</h4>
-                <p>Suítes com vista, gastronomia local e a tranquilidade que você merece.</p>
-                <span class="cta">Reservar agora</span>
-                <div class="feat"><span>Café incluso</span><span>Spa &amp; piscina</span><span>Pet friendly</span></div>
+              <div style="display:grid;grid-template-columns:1.1fr 1fr;height:calc(100% - 44px)">
+                <div style="padding:18px 20px;border-right:1px solid rgba(200,170,110,.12)">
+                  <div style="color:#d4b676;font-size:11px;letter-spacing:3px;margin-bottom:8px">★★★★★</div>
+                  <h4 style="font-family:'Playfair Display';font-size:22px;line-height:1.1;margin-bottom:8px;color:#f3ecdc">Onde a serra <em style="color:#d4b676">encontra</em> o silêncio.</h4>
+                  <p style="font-size:10px;color:#9aab9f;margin-bottom:14px;line-height:1.5">Suítes com vista, gastronomia local e a tranquilidade que você merece.</p>
+                  <span class="cta" style="display:inline-block;background:#d4b676;color:#10261f;font-size:9.5px;font-weight:700;padding:9px 20px;border-radius:3px;letter-spacing:.12em;text-transform:uppercase">Reservar agora</span>
+                  <div style="display:flex;gap:0;margin-top:16px;border-top:1px solid rgba(200,170,110,.15);padding-top:12px">
+                    <div style="flex:1;text-align:center"><div style="font-family:'Playfair Display';font-size:16px;color:#d4b676">48</div><div style="font-size:8px;color:#9aab9f;text-transform:uppercase;letter-spacing:.08em">Suítes</div></div>
+                    <div style="flex:1;text-align:center;border-left:1px solid rgba(200,170,110,.15)"><div style="font-family:'Playfair Display';font-size:16px;color:#d4b676">4.9</div><div style="font-size:8px;color:#9aab9f;text-transform:uppercase;letter-spacing:.08em">Rating</div></div>
+                    <div style="flex:1;text-align:center;border-left:1px solid rgba(200,170,110,.15)"><div style="font-family:'Playfair Display';font-size:16px;color:#d4b676">12</div><div style="font-size:8px;color:#9aab9f;text-transform:uppercase;letter-spacing:.08em">Anos</div></div>
+                  </div>
+                </div>
+                <div style="padding:14px 16px;display:flex;flex-direction:column;gap:8px">
+                  <div style="font-size:9px;color:#d4b676;letter-spacing:.15em;text-transform:uppercase;margin-bottom:2px">Disponibilidade</div>
+                  <div style="background:rgba(255,255,255,.04);border:1px solid rgba(200,170,110,.18);border-radius:8px;padding:10px 12px">
+                    <div style="font-size:9px;color:#9aab9f;margin-bottom:4px;text-transform:uppercase;letter-spacing:.1em">Suíte Vista Serra</div>
+                    <div style="font-family:'Playfair Display';font-size:15px;color:#d4b676">R$ 480<span style="font-size:10px;color:#9aab9f">/noite</span></div>
+                    <div style="font-size:8.5px;color:#6a7a70;margin-top:2px">Café da manhã incluso</div>
+                  </div>
+                  <div style="background:rgba(212,182,118,.08);border:1px solid rgba(200,170,110,.25);border-radius:8px;padding:10px 12px">
+                    <div style="font-size:9px;color:#9aab9f;margin-bottom:4px;text-transform:uppercase;letter-spacing:.1em">Suíte Master</div>
+                    <div style="font-family:'Playfair Display';font-size:15px;color:#d4b676">R$ 780<span style="font-size:10px;color:#9aab9f">/noite</span></div>
+                    <div style="font-size:8.5px;color:#6a7a70;margin-top:2px">Jacuzzi · Spa · Jantar</div>
+                  </div>
+                  <div style="display:flex;gap:6px;margin-top:2px">
+                    <div style="flex:1;background:rgba(255,255,255,.03);border:1px solid rgba(200,170,110,.12);border-radius:6px;padding:6px 8px;font-size:8px;color:#9aab9f;text-align:center">Café incluso</div>
+                    <div style="flex:1;background:rgba(255,255,255,.03);border:1px solid rgba(200,170,110,.12);border-radius:6px;padding:6px 8px;font-size:8px;color:#9aab9f;text-align:center">Pet friendly</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
